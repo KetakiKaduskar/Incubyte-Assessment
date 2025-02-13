@@ -40,3 +40,11 @@ SELECT TransactionID, COUNT(*)
 FROM transaction_table 
 GROUP BY TransactionID 
 HAVING COUNT(*) > 1;
+
+#checking faulty values of date
+SELECT DISTINCT DATE_FORMAT(TransactionDate, '%Y-%m') AS CHECK_YEAR_MONTH
+FROM transaction_table
+ORDER BY CHECK_YEAR_MONTH;
+SELECT COUNT(*) FROM transaction_table
+#SELECT TransactionDate FROM transaction_table
+WHERE DATE_FORMAT(TransactionDate, '%Y-%m') = '0000-00';
