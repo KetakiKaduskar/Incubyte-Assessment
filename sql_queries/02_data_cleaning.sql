@@ -24,9 +24,10 @@ SELECT
 FROM transaction_table;
 
 #Checking for negative values of Transaction Amount and Quantity, this is probably faulty data and will have to be removed or corrected
-SELECT * FROM transaction_table 
-#SELECT count(*) FROM transaction_table 
-WHERE TransactionAmount < 0 OR Quantity < 0;
+#SELECT * FROM transaction_table 
+SELECT count(*) FROM transaction_table 
+WHERE TransactionAmount < 0;
+#WHERE Quantity < 0;
 
 #Checking for wrong values of age
 SELECT * FROM transaction_table 
@@ -46,5 +47,5 @@ SELECT DISTINCT DATE_FORMAT(TransactionDate, '%Y-%m') AS CHECK_YEAR_MONTH
 FROM transaction_table
 ORDER BY CHECK_YEAR_MONTH;
 SELECT COUNT(*) FROM transaction_table
-#SELECT TransactionDate FROM transaction_table
+#SELECT DISTINCT TransactionDate FROM transaction_table
 WHERE DATE_FORMAT(TransactionDate, '%Y-%m') = '0000-00';
