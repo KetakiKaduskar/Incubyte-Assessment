@@ -5,12 +5,13 @@ This project involves analyzing a 500,000-row sales dataset to uncover key insig
     
 ### 📂 Project Structure
 ```
-├── sql_queries/                            # SQL scripts used for analysis
-│   ├── data_cleaning.sql                   # Queries for handling missing & incorrect data
-│   ├── insights.sql                        # Queries to generate key sales metrics
-├── reports/                                # Contains key insights & visualizations
-│   ├── Transaction_data_insights.docx      # Final summary of findings
-├── README.md                               # Project documentation
+├── sql_queries/                                             # SQL scripts used for analysis
+│   ├── 01_loading_csv_data_into_table.sql                   # Queries for loading csv file into a MySQL table
+│   ├── 02_data_cleaning.sql                                 # Queries for handling missing & incorrect data
+│   ├── 03_insights.sql                                      # Queries to generate key sales metrics
+├── reports/                                                 # Contains key insights & visualizations
+│   ├── Transaction_data_insights.docx                       # Final summary of findings
+├── README.md                                                # Project documentation
 ```
     
 ### 🛠️ Tech Stack
